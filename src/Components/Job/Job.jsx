@@ -1,5 +1,6 @@
 import { CiLocationOn } from "react-icons/ci";
 import { LuBadgeDollarSign } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 const Job = ({ job }) => {
   const {
@@ -51,9 +52,11 @@ const Job = ({ job }) => {
             </div>
           </div>
         </div>
-              <div className="flex justify-center pb-6">
-              <button className="btn btn-secondary  w-36">View Details</button>
-       </div>
+        <div className="flex justify-center pb-6">
+          <Link to={`/job/${id}`}>
+            <button  className="btn btn-secondary  w-36">View Details</button>
+          </Link>
+        </div>
       </div>
     </div>
   );
